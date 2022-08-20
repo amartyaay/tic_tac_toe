@@ -5,7 +5,7 @@ const htttp = require("http");
 const mongoose = require("mongoose");
 const app = express();
 const port = process.env.port || 3000;
-
+const Room = require("./models/room.js");
 var server = htttp.createServer(app);
 var io = require("socket.io")(server);
 
@@ -13,7 +13,26 @@ var io = require("socket.io")(server);
 app.use(express.json());
 
 io.on("connection", (socket) => {
-  console.log("socket connected");
+  //   console.log("socket connected");
+  socket.on("createRoom", async ({ nickname }) => {
+    console.log(nickname);
+    try {
+      let room = new Room();
+      let player = {
+        socketID: socket.id,
+        nickname,
+        playerType: "X",
+      };
+      room.players.push(player);
+      room.turn = player;
+      room = await room.save();
+      const roomId = room._id.toString();
+      socket.join(roomId);
+      io.to(roomId).emit("createRoomSuccess", room);
+    } catch (e) {
+      console.log(e);
+    }
+  });
 });
 
 const DB =
