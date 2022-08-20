@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
       socket.join(roomId);
       io.to(roomId).emit("createRoomSuccess", room);
     } catch (e) {
-      console.log(e);
+      console.log(e.toString());
     }
   });
 });
