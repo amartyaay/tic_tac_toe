@@ -120,7 +120,7 @@ io.on("connection", (socket) => {
 mongoose
   .connect(DB)
   .then(() => {
-    console.log("Connection successful!");
+    console.log("DB Connection successful!");
   })
   .catch((e) => {
     console.log(e);
