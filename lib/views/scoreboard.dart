@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toe/provider/room_data_provider.dart';
+import '/provider/room_data_provider.dart';
 import 'package:provider/provider.dart';
 
 class Scoreboard extends StatelessWidget {

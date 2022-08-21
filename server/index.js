@@ -16,7 +16,7 @@ const DB =
   "mongodb+srv://amartya:amartya@cluster0.eurd8ke.mongodb.net/?retryWrites=true&w=majority";
 
 io.on("connection", (socket) => {
-  console.log("Socket connected!");
+  console.log("connected!");
   socket.on("createRoom", async ({ nickname }) => {
     console.log(nickname);
     try {
@@ -120,7 +120,7 @@ io.on("connection", (socket) => {
 mongoose
   .connect(DB)
   .then(() => {
-    console.log("DB Connection successful!");
+    console.log("Connection successful!");
   })
   .catch((e) => {
     console.log(e);

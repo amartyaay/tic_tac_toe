@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toe/provider/room_data_provider.dart';
-import 'package:tic_tac_toe/resources/game_methods.dart';
-import 'package:tic_tac_toe/resources/socket_client.dart';
-import 'package:tic_tac_toe/screens/game_screen.dart';
-import 'package:tic_tac_toe/utils/utils.dart';
+import '/provider/room_data_provider.dart';
+import '/resources/game_methods.dart';
+import '/resources/socket_client.dart';
+import '/screens/game_screen.dart';
+import '/utils/utils.dart';
 import 'package:provider/provider.dart';
 import 'package:socket_io_client/socket_io_client.dart';
 

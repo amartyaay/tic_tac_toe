@@ -1,6 +1,6 @@
 {
-    "name": "tic_tac_toe",
-    "short_name": "tic_tac_toe",
+    "name": "mp_tictactoe",
+    "short_name": "mp_tictactoe",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

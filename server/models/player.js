@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const playerSchema = new mongoose.Schema({
   nickname: {
     type: String,
@@ -16,4 +17,5 @@ const playerSchema = new mongoose.Schema({
     type: String,
   },
 });
+
 module.exports = playerSchema;

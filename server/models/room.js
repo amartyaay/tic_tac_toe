@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const playerSchema = require("./players");
+const playerSchema = require("./player");
+
 const roomSchema = new mongoose.Schema({
   occupancy: {
     type: Number,
@@ -12,7 +13,7 @@ const roomSchema = new mongoose.Schema({
   currentRound: {
     required: true,
     type: Number,
-    deafult: 1,
+    default: 1,
   },
   players: [playerSchema],
   isJoin: {

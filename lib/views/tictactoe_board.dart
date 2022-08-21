@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toe/provider/room_data_provider.dart';
-import 'package:tic_tac_toe/resources/socket_methods.dart';
+import '/provider/room_data_provider.dart';
+import '/resources/socket_methods.dart';
 import 'package:provider/provider.dart';
 
 class TicTacToeBoard extends StatefulWidget {
