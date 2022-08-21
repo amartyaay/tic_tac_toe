@@ -1,22 +1,22 @@
-console.log("Hello from Server.");
-const { Socket } = require("dgram");
+// importing modules
 const express = require("express");
-const htttp = require("http");
+const http = require("http");
 const mongoose = require("mongoose");
+
 const app = express();
-const port = process.env.port || 3000;
-const Room = require("./models/room.js");
-var server = htttp.createServer(app);
+const port = process.env.PORT || 3000;
+var server = http.createServer(app);
+const Room = require("./models/room");
 var io = require("socket.io")(server);
 
-//middle ware
+// middle ware
 app.use(express.json());
 
 const DB =
   "mongodb+srv://amartya:amartya@cluster0.eurd8ke.mongodb.net/?retryWrites=true&w=majority";
 
 io.on("connection", (socket) => {
-  console.log("connected to socket!");
+  console.log("connected!");
   socket.on("createRoom", async ({ nickname }) => {
     console.log(nickname);
     try {
@@ -120,12 +120,12 @@ io.on("connection", (socket) => {
 mongoose
   .connect(DB)
   .then(() => {
-    console.log("DB connected");
+    console.log("Connection successful!");
   })
   .catch((e) => {
     console.log(e);
   });
 
 server.listen(port, "0.0.0.0", () => {
-  console.log(`server started on  port ${port}`);
+  console.log(`Server started and running on port ${port}`);
 });
