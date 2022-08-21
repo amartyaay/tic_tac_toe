@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mp_tictactoe/responsive/responsive.dart';
-import 'package:mp_tictactoe/screens/create_room_screen.dart';
-import 'package:mp_tictactoe/screens/join_room_screen.dart';
-import 'package:mp_tictactoe/widgets/custom_button.dart';
+import 'package:tic_tac_toe/responsive/responsive.dart';
+import 'package:tic_tac_toe/screens/create_room_screen.dart';
+import 'package:tic_tac_toe/screens/join_room_screen.dart';
+import 'package:tic_tac_toe/widgets/custom_button.dart';
 
 class MainMenuScreen extends StatelessWidget {
   static String routeName = '/main-menu';

@@ -26,16 +26,16 @@ class CustomButton extends StatelessWidget {
       ),
       child: ElevatedButton(
         onPressed: onTap,
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontSize: 16,
-          ),
-        ),
         style: ElevatedButton.styleFrom(
           minimumSize: Size(
             width,
             50,
+          ),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 16,
           ),
         ),
       ),

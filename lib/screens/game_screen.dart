@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mp_tictactoe/provider/room_data_provider.dart';
-import 'package:mp_tictactoe/resources/socket_methods.dart';
-import 'package:mp_tictactoe/views/scoreboard.dart';
-import 'package:mp_tictactoe/views/tictactoe_board.dart';
-import 'package:mp_tictactoe/views/waiting_lobby.dart';
+import 'package:tic_tac_toe/provider/room_data_provider.dart';
+import 'package:tic_tac_toe/resources/socket_methods.dart';
+import 'package:tic_tac_toe/views/scoreboard.dart';
+import 'package:tic_tac_toe/views/tictactoe_board.dart';
+import 'package:tic_tac_toe/views/waiting_lobby.dart';
 import 'package:provider/provider.dart';
 
 class GameScreen extends StatefulWidget {
