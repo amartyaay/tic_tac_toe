@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mp_tictactoe/resources/game_methods.dart';
+import 'package:tic_tac_toe/resources/game_methods.dart';
 
 void showSnackBar(BuildContext context, String content) {
   ScaffoldMessenger.of(context).showSnackBar(
