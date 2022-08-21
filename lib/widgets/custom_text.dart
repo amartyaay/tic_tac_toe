@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Customtext extends StatelessWidget {
+class CustomText extends StatelessWidget {
   final List<Shadow> shadows;
   final String text;
   final double fontSize;
-
-  const Customtext({
-    super.key,
+  const CustomText({
+    Key? key,
     required this.shadows,
     required this.text,
     required this.fontSize,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

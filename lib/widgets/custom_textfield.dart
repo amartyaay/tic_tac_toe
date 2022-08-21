@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toe/utils/colors.dart';
+
+import 'package:mp_tictactoe/utils/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
+  final bool isReadOnly;
   const CustomTextField({
-    super.key,
+    Key? key,
     required this.controller,
     required this.hintText,
-  });
+    this.isReadOnly = false,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Container(
-      width: size.width * 0.9,
       decoration: const BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -25,9 +26,13 @@ class CustomTextField extends StatelessWidget {
         ],
       ),
       child: TextField(
+        readOnly: isReadOnly,
         controller: controller,
         decoration: InputDecoration(
-            fillColor: bgColor, filled: true, hintText: hintText),
+          fillColor: bgColor,
+          filled: true,
+          hintText: hintText,
+        ),
       ),
     );
   }

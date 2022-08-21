@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class Responsive extends StatelessWidget {
   final Widget child;
   const Responsive({
-    super.key,
+    Key? key,
     required this.child,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
